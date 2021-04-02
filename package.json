@@ -3,8 +3,9 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
+        "start": "cd server && node server.js",
         "heroku-postbuild": "cd food && yarn && yarn build",
-        "client": "cd food && yarn start",
+        "client": "cd food && npm start",
         "server": "cd server && nodemon server.js --ignore client",
         "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
     },
@@ -28,7 +29,7 @@
     "proxy": {
         "/api": {
             "target": "http://0.0.0.0:5000",
-            "secure": false
+            "secure": true
         }
     }
 }
