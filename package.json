@@ -2,7 +2,7 @@
     "name": "management",
     "version": "1.0.0",
     "scripts": {
-        "heroku-postbuild": "cd client && npm install && npm run build",
+        "heroku-postbuild": "cd food && npm install && npm run build",
         "client": "cd food && yarn start",
         "server": "cd server && nodemon server.js",
         "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
