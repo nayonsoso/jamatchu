@@ -4,6 +4,7 @@ const {kakao} = window;
 import React,{Component} from "react"
 
 class MapContent extends React.Component {
+    state={keyword:""}
     componentDidMount() {
         const script = document.createElement("script");
         script.async = true;
@@ -26,7 +27,7 @@ class MapContent extends React.Component {
                 var ps = new window.kakao.maps.services.Places();
                 // 키워드로 장소를 검색합니다
                 Axios.post('/map',{}).then((res)=>{
-                    var keyword="";
+                    var keyword = "";
                     var mbti = res.data.mbti;
                     if(mbti=="entp"){ keyword = '인하대 떡볶이'}
                     else if(mbti=="enfj"){keyword = '인하대 초밥'}
@@ -45,6 +46,7 @@ class MapContent extends React.Component {
                     else if(mbti=="isfp"){keyword = '인하대 라멘'}
                     else if(mbti=="istj"){keyword = '인하대 국밥'}
                     else if(mbti=="istp"){keyword = '인하대 파스타'}
+                    this.setState({keyword:keyword})
                     ps.keywordSearch(keyword, placesSearchCB);
                     // 키워드 검색 완료 시 호출되는 콜백함수 입니다
                     function placesSearchCB (data, status, pagination) {
@@ -81,7 +83,13 @@ class MapContent extends React.Component {
         };
     }
     render() {
-        return (<div id="Mymap" style={{ width: "100%", height: "500px"}}></div>)
+        var keyword = this.state.keyword;
+        return (
+            <div className="mapBox">
+                <div>카카오 지도에서 "{keyword}" 검색 결과입니다. </div>
+                <div id="Mymap" style={{ width: "100%", height: "500px"}}></div>
+            </div>
+        )
     }
 }
 export default MapContent;

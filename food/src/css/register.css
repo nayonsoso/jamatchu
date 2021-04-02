@@ -50,8 +50,18 @@
 /*input*/
 .all .input_list {
     margin: 0px auto;
-    width: 22%;
+    width: 380px;
     position: relative;
+}
+.all .input_list .inputBox .heads {
+    /*본인확인용 질문 head*/
+    margin-bottom: 8px;
+    color: rgb(70, 70, 70);
+}
+.all .input_list .inputBox .Box select {
+    /*본인확인용 질문들*/
+    color: rgb(119, 119, 119);
+    font-size: 15px;
 }
 /*next&pre 버튼*/
 .all .next .nextPage {
@@ -159,6 +169,11 @@
     .Box select {
         height: 30px;
         width: 100%;
+    }
+    .all .input_list .inputBox .Box select {
+        /*본인확인용 질문들*/
+        color: rgb(70, 70, 70);
+        font-size: 11px;
     }
 }
 

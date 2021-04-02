@@ -30,36 +30,36 @@ body {
 /*img*/
 .board .image{width: 75%;
   height: 400px;padding:80px 0 0 100px;margin: 10px auto 50px auto;
-  background: url("../images/coffee2.png") no-repeat; position: relative;
+  background: url("../images/coffee2.png") no-repeat; position:relative;
   background-position: center; background-size: cover;
 }
 .board .image .imageTitle {animation-name: slid-up; animation-duration: 0.7s;
   position: relative;
-  font-size: 44px; 
-  text-align: left; 
+  font-size: 44px;
+  text-align: left;
   color: #e9e9e9; left: 0;
   font-weight: 200;
-  
+}
+.board .image .imageText {animation-name: slid-up; animation-duration: 1.2s;
+  line-height: 28px;
+  text-align: left; bottom:50px;
+  position: absolute;
+
+  color: #eeeeeeea;
+  font-size: 22px;
+  font-weight: 140;
+  letter-spacing: 3px;
 }
 .board .image .imageTitle::after{
   content: ""; width:450px; height: 3px; background: #e9e9e9;
   position: absolute; bottom: -15px; left:-10px;
 }
 
-.board .image .imageText {animation-name: slid-up; animation-duration: 1.2s;
-    line-height: 28px; 
-    text-align: left; bottom:50px;
-  position: absolute;
-  
-  color: #eeeeeeea;
-  font-size: 22px;
-  font-weight: 140;
-  letter-spacing: 3px;
-}
 
 /*게시글*/
 .board table{
   width:100%; position: relative; top:18px;
+  background-color: #b4e7f8;
 }
 .board table thead tr{ border-top: rgb(90, 90, 90) 3px solid; box-sizing: border-box;
   background:#7c7c7c; color: #eeeeeeea; height: 44px;  width:100%; font-size: 18px;
@@ -81,6 +81,56 @@ thead tr .head-7{width:6%;}
   left: 0;
   right: 0;
   margin: 0px auto 0px auto;
+}
+/*반응형*/
+@media (max-width: 767px) {
+  /*글 작성*/
+  .board .text {
+    position: absolute;
+    width: 94%;
+    /*height: 687px;*/
+    left: 0;
+    right: 0;
+    margin: 0px auto 0px auto;
+  }
+  .board table thead tr{ border-top: rgb(90, 90, 90) 3px solid; box-sizing: border-box;
+    background:#7c7c7c; color: #eeeeeeea; height: 44px;  width:100%; font-size: 14px;
+  }
+  /*메인 이미지*/
+  .board .image {
+    height: 250px;
+    margin-top: 0px;
+    padding-left: 15px;
+    width:100%;
+    padding-top: 73px;
+  }
+  .board .image .imageTitle {animation-name: slid-up; animation-duration: 0.7s;
+    position: relative;
+    font-size: 20px;
+    text-align: left;
+    color: #e9e9e9; left: 0;
+    font-weight: 200;
+  }
+  .board .image .imageText {animation-name: slid-up; animation-duration: 1.2s;
+    line-height: 20px;
+    text-align: left; bottom:13px;
+    position: absolute;
+
+    color: #eeeeeeea;
+    font-size: 12px;
+    font-weight: 140;
+    letter-spacing: 1px;
+  }
+  .board .image .imageTitle::after{ /*선*/
+    content: ""; width:100px; height: 1.5px; background: #e9e9e9;
+    position: absolute; bottom: -7px; left:1px;
+  }
+
+  /*게시글*/
+  .board .text .search ul
+  {
+    display: none;
+  }
 }
 .Boardrow td{
   font-size: 17px;

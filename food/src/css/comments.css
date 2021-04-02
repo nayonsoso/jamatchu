@@ -1,34 +1,55 @@
 .comments .comment{color:#4e4e4e; 
-    margin:10px auto; width:100%; font-size:28px; border:1px solid rgb(200, 200, 200);
-    padding: 15px; border-radius: 10px; background:#fafafa; display: inline-block;
+    margin:10px auto; width:100%; font-size:20px; border:1px solid rgb(200, 200, 200);
+    padding: 15px 10px 15px 10px; border-radius: 10px; background:#fafafa; display: inline-block;
 }
 .comments h2{ display: inline-block; color:#4e4e4e;
-    width: 75%; text-align: left; margin:10px auto; font-size: 32px; padding: 20px;
+    width: 75%; text-align: left; margin:10px auto; font-size: 28px; padding: 20px;
   }
 .comments{
     border-top: 2px dashed rgb(129, 129, 129);
     width: 75%; text-align: left; margin:0 auto;
     margin-top: 60px;
 }
+.comments .comment .comment_line{
+    width:330px; height: 2px; margin-top: 6px; margin-bottom: 20px;
+    border-top:2px dotted rgb(131, 131, 131); display: inline-block;
+    margin-left: 10px;
+
+}
+/*반응형*/
+@media (max-width: 767px) {
+    .comments h2{ display: inline-block; color:#4e4e4e;
+        width: 75%; text-align: left; margin:10px auto; font-size: 20px; padding: 10px;
+    }
+    .comments{
+        border-top: 2px dashed rgb(129, 129, 129);
+        width: 75%; text-align: left; margin:0 auto;
+        margin-top: 60px;
+    }
+    .comments .comment .comment_line{
+        width:90%; height: 2px; margin-top: 6px; margin-bottom: 20px;
+        border-top:2px dotted rgb(131, 131, 131); display: inline-block;
+        margin-left: 10px;
+
+    }
+}
+
+
 .comments .comment .title {
     text-align: left;color: #5d5d5d;
 }
 .comments .comment .title .name{
-    margin: 0 30px; margin-left: 15px;
+    margin: 0 10px; margin-left: 12px;
 }
 .comments .comment .title .date{
-    font-size: 18px; color:rgb(139, 139, 139);
+    font-size: 14px; color:rgb(139, 139, 139);
 }
-.comments .comment .comment_line{
-    width:330px; height: 2px; margin-top: 10px; margin-bottom: 20px;
-    border-top:2px dotted rgb(131, 131, 131); display: inline-block;
-    
-}
+
 .comments .comment .content{color:#707070;
-    text-align: left; margin:0 30px; font-size: 20px;margin-left: 15px;
+    text-align: left; margin:7px 20px; font-size: 17px;margin-left: 15px;
 }
 .comments .comment .title .control{
-    float:right;margin-top: -5px; 
+    float:right;margin-top: -5px;
 }
 .comments .comment .title .control button{
     transition: 0.2s all;

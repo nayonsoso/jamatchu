@@ -43,9 +43,16 @@
     margin-bottom: 8px;
     color: rgb(61, 61, 61);
 }
+.findId_all .result .Box select {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: rgb(119, 119, 119);
+}
+
 .findId_all .result .box {
-    height: 40px;
-    width: 300px;
+    /*결과input: 아이디 & 비번결과*/
+    height: 43px;
+    width: 100%;
     margin-bottom: 33px;
     border: none;
     color: rgb(66, 66, 66);
@@ -62,14 +69,12 @@
     top: 30px;
     color: rgb(70, 134, 255);
     margin-right: 70px;
-    width: 100px;
+    width: 120px;
     height: 50px;
     position: relative;
     transition: all 0.5s;
 }
-.findId_all .gotest .tologin {
-    top: 100px;
-}
+
 .findId_all .gotest .tologin:after,
 .findId_all .gotest .nextPage:after {
     position: absolute;
@@ -93,7 +98,19 @@
     width: 70px;
 }
 
+.findId_all .result {
+    text-align: left;
+    display: inline-block;
+    width: 500px;
+    height: 300px;
+    background-color: blanchedalmond;
+}
+
 @media (max-width: 767px) {
+    .findId_all .result {
+        width: 60%;
+        height: 300px;
+    }
     .findId_all {
         padding-top: 20%;
     }
@@ -118,13 +135,17 @@
         margin-bottom: 50px;
         width: 100%;
     }
+    /*
     .findId_all .text .box h1 {
-        font-size: 25px;
-        margin-bottom: 10px;
+      font-size: 25px;
+      margin-bottom: 10px;
     }
     /*정보*/
     .findId_all .result .heads {
         font-size: 16px;
+    }
+    .findId_all .result .Box select {
+        font-size: 11px;
     }
     .findId_all .result .box {
         height: 35px;
@@ -140,9 +161,4 @@
         margin-right: 10%;
         margin-top: 30%;
     }
-}
-
-.findId_all .result {
-    text-align: left;
-    display: inline-block;
 }
