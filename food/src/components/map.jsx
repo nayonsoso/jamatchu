@@ -1,7 +1,6 @@
 /*global kakao*/
 import Axios from "axios";
-const {kakao} = window;
-import React,{Component} from "react"
+import React from "react"
 
 class MapContent extends React.Component {
     state={keyword:""}
