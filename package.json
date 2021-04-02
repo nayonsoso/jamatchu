@@ -2,6 +2,7 @@
     "name": "management",
     "version": "1.0.0",
     "scripts": {
+        "heroku-postbuild": "cd client && npm install && npm run build",
         "client": "cd food && yarn start",
         "server": "cd server && nodemon server.js",
         "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
@@ -14,7 +15,7 @@
         "express": "^4.16.4",
         "express-mysql-session": "^2.1.5",
         "express-session": "^1.17.1",
-        "http-proxy-middleware": "^1.0.6",
+        "http-proxy-middleware": "^1.1.0",
         "mysql": "^2.18.1",
         "pug": "^3.0.2",
         "react-helmet": "^6.1.0",
