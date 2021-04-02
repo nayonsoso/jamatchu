@@ -84,6 +84,16 @@ app.post("/", function(req, res) {
     res.send({ id: "", nickName: "", loginCheck: false })
   }
 })
+
+// 리액트 정적 파일 제공
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+// 라우트 설정
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+
+
 // 로그아웃
 app.post("/logout", function(req, res) {
   delete req.session.user_id
