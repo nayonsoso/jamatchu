@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "Helvetica Extended Medium";
+    src: url("../fonts/Helvetica Extended Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: expanded;
+}
+@font-face {
+    font-family: "GmarketSansBold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+.nav {
+    border-top: rgb(0, 0, 200) solid 4px;
+    margin: 0px 58.5px 0px 58.5px;
+    display: flex;
+    height: 87px;
+    justify-content: space-between;
+}
+.nav .title a {
+    font-family: "GmarketSansBold", sans-serif !important;
+    height: 80px;
+    font-stretch: expanded;
+    font-size: 55px;
+    font-family: "Helvetica Extended Medium";
+    letter-spacing: 6px;
+    color: rgb(0, 0, 200);
+    font-weight: 600;
+}
+.control .link {
+    display: inline-block;
+    position: relative;
+    font-size: 23px;
+    color: rgb(83, 83, 83);
+    font-weight: 500;
+    border-right: rgb(200, 200, 200) 2px solid;
+}
+.links .control {
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 160px); /*제안센터삭제*/
+}
+.nav .title {
+    display: inline-block;
+    text-align: left;
+    padding-top: 20px;
+}
+@media (max-width: 767px) {
+    .nav {
+        background-color: #f2f2f2;
+        width: 100%;
+        height: 55px;
+        margin: 0px;
+        border-top: none;
+    }
+    .nav .title {
+        padding-top: 30px;
+        padding-left: 10px;
+    }
+    .nav .title a {
+        font-size: 18px;
+        letter-spacing: 2px;
+        font-weight: 200;
+    }
+    .control .link {
+        font-weight: bold;
+        font-size: 12px;
+        border-right: none;
+    }
+    .links .control {
+        top: 12px;
+        right: 3px;
+        grid-template-columns: repeat(4, 52px); /*제안센터삭제*/
+    }
+}
+.nav .title {
+    display: inline-block;
+    text-align: left;
+}
+
+.nav .links {
+    width: 60%;
+    align-self: end;
+    position: relative;
+}
+
+.control .link:hover,
+.control .link:focus {
+    color: black;
+    font-weight: bold;
+}
+/*
+.control .link:after{
+    content:""; width:0%; height: 1.7px; position:absolute; background: rgba(180, 180, 180, 0.705);
+    left:50%; transform: translateX(-50%); transition: all 0.5s; bottom:-4px;
+}
+.control .link:hover:after,.control .link:focus:after{
+    color:black;
+}*/
+
+.control .link:nth-child(4) {
+    /*제안센터삭제*/
+    border-right: none;
+}

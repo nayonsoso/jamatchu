@@ -1,0 +1,260 @@
+@font-face {
+    font-family: "Helvetica Extended Light";
+    src: url("../fonts/Helvetica Extended Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: expanded;
+}
+.letter {
+    position: relative;
+}
+.letter .wrap {
+    position: relative;
+    top: 20%;
+    text-align: left;
+    padding-left: 60px;
+    font-family: "Helvetica Extended Light";
+    padding-right: 30px;
+    z-index: 2;
+}
+
+/*
+*/
+.letter img {
+    z-index: -3;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    top: -7.5%;
+    background: #000;
+    margin-bottom: 100px;
+    height: 100%;
+}
+.letter img:before {
+    position: relative;
+    content: "";
+    background: rgba(0, 0, 0);
+    color: rgba(0, 0, 0, 0.527);
+    width: 130%;
+    height: 580px;
+    left: 0;
+    top: 0;
+    min-width: 800px;
+    margin-right: -100px;
+}
+.letter .wrap:after {
+    position: absolute;
+    content: "";
+    width: 110%;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.808);
+    top: -12%;
+    left: 4.3%;
+    min-height: 350px;
+}
+.wrap .title h2 {
+    font-size: 50px;
+    font-weight: normal;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.931);
+    position: relative;
+    z-index: 6;
+}
+.wrap .description {
+    line-height: 32px;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.767);
+    font-weight: 600;
+    position: relative;
+    z-index: 6;
+    top: 20px;
+    padding-top: 30px;
+}
+.wrap .line {
+    display: block;
+    width: 80%;
+    height: 2px;
+    color: whitesmoke;
+    background: whitesmoke;
+    position: relative;
+    left: -1%;
+    z-index: 6;
+}
+
+/*login*/
+.haha {
+    height: 80%;
+    width: 100%;
+    position: relative;
+    top: 10%;
+}
+.total {
+    width: 90%;
+    margin: auto;
+
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: inherit;
+}
+.total .logins {
+    height: 70%;
+    position: inherit;
+    border-right: solid 2px rgb(200, 200, 200);
+    margin-bottom: 100px;
+}
+.logins h2 {
+    position: relative;
+    left: -6%;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    color: rgb(59, 59, 59);
+}
+.logins:before {
+    width: 70%;
+    position: absolute;
+    left: 9%;
+    height: 580px;
+    content: "";
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 12px 18px rgba(50, 50, 93, 0.2);
+    background: #fff;
+    border-radius: 20px;
+}
+.loginButton input {
+    background: url("../images/login.png") no-repeat;
+    background-size: contain;
+    margin-top: 50px;
+    margin-left: 20px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+    min-width: 100px;
+    border: none;
+    padding-bottom: 50px;
+    cursor: pointer;
+}
+.finds {
+    margin-top: 15px;
+    text-align: left;
+    margin-bottom: 60px;
+}
+.finds img {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 9px;
+}
+.finds .find {
+    position: relative;
+    font-size: 21px;
+    color: rgb(70, 70, 70);
+}
+.register {
+    color: rgb(55, 55, 255);
+    text-decoration: underline;
+    font-size: 18px;
+}
+.logins form {
+    position: relative;
+    width: 98%;
+    padding-left: 20%;
+    padding-right: 8%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 150px;
+}
+.find span {
+    position: absolute;
+    left: 49%;
+    background-color: rgb(98, 98, 98);
+    top: 2px;
+    width: 2px;
+    height: 16px;
+    z-index: 3;
+    border-radius: 2px;
+}
+@media (max-width: 767px) {
+    .total {
+        grid-template-columns: none;
+        width: 100%;
+        padding-top: 10%;
+    }
+    .logins form {
+        /*input box, 찾기, 처음이신가요*/
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+    .haha .total .letter {
+        display: none;
+    }
+    .total .logins {
+        border: none;
+    }
+    .haha {
+        top: 20%;
+        width: 90%;
+    }
+    .logins:before {
+        width: 90%;
+        height: 400px;
+    }
+    .logins h2 {
+        font-size: 26px;
+        font-weight: 250;
+        margin-top: 40px;
+        left: 0%;
+        right: 0%;
+    }
+    .loginButton input {
+        margin-left: 20%;
+        width: 70px;
+        height: 70px;
+        min-width: 70px; /*꼭 체크-> 비율안맞을때*/
+        margin-top: 45%;
+    }
+    .finds {
+        margin-top: 2px;
+        margin-bottom: 60px;
+    }
+    .finds img {
+        width: 15px;
+        height: 15px;
+        margin-bottom: 9px;
+    }
+    .register {
+        color: rgb(55, 55, 255);
+        text-decoration: underline;
+        font-size: 12px;
+    }
+    .finds .find {
+        position: relative;
+        font-size: 12px;
+        color: rgb(70, 70, 70);
+    }
+    .find span {
+        position: absolute;
+        left: 47%;
+        background-color: rgb(98, 98, 98);
+        top: 2px;
+        width: 1px;
+        height: 13px;
+        z-index: 3;
+        border-radius: 2px;
+    }
+    .finds {
+        margin-top: 15px;
+        text-align: left;
+        margin-bottom: 20%;
+    }
+}
+
+.find a:nth-child(3) {
+    position: absolute;
+    right: 0;
+}

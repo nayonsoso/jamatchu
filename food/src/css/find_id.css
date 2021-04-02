@@ -1,0 +1,148 @@
+.findId_all {
+    color: rgb(80, 80, 80);
+    height: 80%;
+}
+.findId_all .title {
+    padding-top: 70px;
+    position: relative;
+    margin-bottom: 130px;
+}
+.findId_all .title:after {
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: rgb(151, 151, 151);
+    position: absolute;
+    bottom: -30px;
+}
+.findId_all .title img {
+    vertical-align: middle;
+}
+.findId_all .title h1 {
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 42px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+.findId_all .text .box {
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    display: inline-block;
+}
+.findId_all .text {
+    margin-bottom: 100px;
+}
+
+/*정보*/
+.findId_all .result .heads {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: rgb(61, 61, 61);
+}
+.findId_all .result .box {
+    height: 40px;
+    width: 300px;
+    margin-bottom: 33px;
+    border: none;
+    color: rgb(66, 66, 66);
+    background: rgb(240, 240, 240);
+    font-size: 20px;
+    padding-left: 15px;
+}
+/*버튼*/
+.findId_all .gotest .tologin,
+.findId_all .gotest .nextPage {
+    float: right;
+    margin-bottom: 53px;
+    font-size: 30px;
+    top: 30px;
+    color: rgb(70, 134, 255);
+    margin-right: 70px;
+    width: 100px;
+    height: 50px;
+    position: relative;
+    transition: all 0.5s;
+}
+.findId_all .gotest .tologin {
+    top: 100px;
+}
+.findId_all .gotest .tologin:after,
+.findId_all .gotest .nextPage:after {
+    position: absolute;
+    top: 33px;
+    width: 0;
+    content: "";
+    height: 2px;
+    background: rgb(0, 88, 251);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s;
+}
+.findId_all .gotest .nextPage:hover,
+.findId_all .gotest .tologin:hover {
+    color: rgb(0, 88, 251);
+}
+.findId_all .gotest .nextPage:hover:after,
+.findId_all .gotest .nextPage:focus:after,
+.findId_all .gotest .tologin:hover:after,
+.findId_all .gotest .tologin:focus:after {
+    width: 70px;
+}
+
+@media (max-width: 767px) {
+    .findId_all {
+        padding-top: 20%;
+    }
+    .findId_all .title h1 {
+        font-size: 25px;
+    }
+    .findId_all .title img {
+        width: 30px;
+        height: 30px;
+    }
+    .findId_all .title:after {
+        width: 25px;
+        bottom: -15px;
+    }
+    .findId_all .text .box {
+        font-size: 15px;
+        line-height: 17px;
+        margin: 0px auto;
+        width: 80%;
+    }
+    .findId_all .text {
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .findId_all .text .box h1 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    /*정보*/
+    .findId_all .result .heads {
+        font-size: 16px;
+    }
+    .findId_all .result .box {
+        height: 35px;
+        width: 100%;
+        margin-bottom: 27px;
+        font-size: 15px;
+    }
+    /*다음버튼*/
+    .findId_all .gotest .tologin,
+    .findId_all .gotest .nextPage {
+        top: -50px;
+        font-size: 18px;
+        margin-right: 10%;
+        margin-top: 30%;
+    }
+}
+
+.findId_all .result {
+    text-align: left;
+    display: inline-block;
+}

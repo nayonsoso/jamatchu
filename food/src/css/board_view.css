@@ -1,0 +1,118 @@
+@keyframes slid-up{
+    0%{opacity: 0;}
+    40%{opacity: 0; transform : translateY(40px);}
+  }
+  /*img*/
+  .board_view{width: 100%;}
+  .board_view {
+    position: relative;
+    height: 400px;
+    color: #e9e9e9;
+  }
+  
+  .board_view .text{width: 75%;
+    height: 400px;padding:80px 0 0 100px;margin: 10px auto 50px auto;
+    background: url("../images/coffee2.png") no-repeat;
+    background-position: center; background-size: cover;
+  }
+  .board_view .text .imageTitle {animation-name: slid-up; animation-duration: 0.7s;
+    position: relative;
+    font-size: 44px; 
+    text-align: left; 
+    color: #e9e9e9; left: 0;
+    font-weight: 200;
+    
+  }
+  .board_view .text .imageTitle::after{
+    content: ""; width:450px; height: 3px; background: #e9e9e9;
+    position: absolute; bottom: -15px; left:-10px;
+  }
+  
+  .board_view .text .imageText {animation-name: slid-up; animation-duration: 1.2s;
+      line-height: 28px; 
+      text-align: left; bottom:50px;
+    position: absolute;
+    
+    color: #eeeeeeea;
+    font-size: 22px;
+    font-weight: 140;
+    letter-spacing: 3px;
+  }
+.board_view>.title{ text-align: left; ;
+    width: 75%; background:#ebebeb; border-top: rgb(90, 90, 90) 3px solid;
+    height: 120px; color:#4e4e4e; margin: 0 auto;
+     border-bottom: #bbbbbb 1px solid; position: relative; top:0px;
+}
+
+.board_view>.title h1{
+    padding-top: 20px; display: block; font-weight: normal;
+    font-size: 44px; color:#4e4e4e; padding-left: 20px;
+}
+.board_view>.title ul{
+    padding-left: 20px; margin-top: 20px;
+}
+.board_view>.title ul li{
+    display: inline-block; margin-right: 10px;
+}
+.board_view>.title ul .control{
+    margin-right:20px; color: #989898;
+}
+.board_view>.title ul .control_btns{
+  float: right; padding-bottom: 15px; margin-top: -5px;
+}
+.board_view>.title ul li button{
+  transition: 0.2s all;
+    margin:0 10px; border:none; background-color: transparent;
+    cursor: pointer; color:rgba(50, 69, 156, 0.8);
+    font-size: 16px; font-weight: bold;
+}
+.board_view>.title ul li .delete{
+  color:rgba(228, 20, 20, 0.7);
+}
+.board_view>.title ul li .update:hover, .board_view>.title ul li .update:focus{
+  color:rgb(0, 42, 230); outline: none;
+}
+.board_view>.title ul li .delete:hover, .board_view>.title ul li .delete:focus{
+  color:rgb(255, 0, 0);outline: none;
+}
+
+.board_view .description{
+    color:#4e4e4e; font-size: 22px;
+    width:75%; margin:20px auto 0 auto; border-radius: 12px; background:#fcfcfc;
+    text-align: left; border: 1px solid rgb(223, 223, 223); padding:40px 25px;
+}
+.board_view .btns{
+    width: 260px; margin: 30px auto 0 auto;
+}
+.board_view .btns div{
+  clear:both;
+}
+.board_view .btns button{float: left; width: 80px; height: 36px; border-radius: 5px; font-size: 18px; color: #f3f3f3; background:  #acacac; border: none;
+transition: 0.3s all; cursor: pointer;}
+.board_view .btns .next{float: right; background:  #4e4e4e;}
+.board_view .btns button:hover, .board_view .btns button:focus{
+    outline: none;
+    box-shadow: 3px 9px 15px rgba(50,50,93,0.2); transform:translateY(-3px);
+}
+
+
+.writeComment{
+  width:75%; margin:0 auto; height: 200px;
+}
+.writeComment .write textarea{
+  width:75%; float:left; height: 100px; font-size: 18px; padding: 15px;transition: 0.5s all;
+  outline: none;  margin-bottom: 50px; border-radius: 10px; margin-top: 20px; border-color: rgb(155, 155, 155);
+}
+.writeComment .write textarea:focus, .writeComment .write textarea:hover{
+  box-shadow: 0px 0px 10px 0.3em rgba(61, 61, 61, 0.5); 
+}
+
+.writeComment button{transition: 0.3s all;
+  width:100px; height: 80px; font-size: 22px; 
+  background: #4e4e4e; color:#e9e9e9; margin-top: 28px;
+  border-radius: 15px; border:none; float: left; margin-left: 30px;
+}
+.writeComment button:hover, .writeComment button:focus{
+  box-shadow: 3px 3px 12px rgba(42, 42, 42, 0.513); background: #4e4e4eee;
+   color:white; outline: none; transform: translateY(-5px);
+}

@@ -1,0 +1,169 @@
+@charset "utf-8";
+@import "./reset.css";
+/*
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff")
+    format("woff");
+}
+
+body {
+  background-color: #f6f6f6;
+  font-family: "NanumBarunGothic", sans-serif !important;
+}*/
+
+
+@keyframes slid-up{
+  0%{opacity: 0;}
+  40%{opacity: 0; transform : translateY(40px);}
+}
+/*img*/
+.board .image{width: 75%;
+  height: 400px;padding:80px 0 0 100px;margin: 10px auto 50px auto;
+  background: url("../images/coffee2.png") no-repeat; position: relative;
+  background-position: center; background-size: cover;
+}
+.board .image .imageTitle {animation-name: slid-up; animation-duration: 0.7s;
+  position: relative;
+  font-size: 44px; 
+  text-align: left; 
+  color: #e9e9e9; left: 0;
+  font-weight: 200;
+  
+}
+.board .image .imageTitle::after{
+  content: ""; width:450px; height: 3px; background: #e9e9e9;
+  position: absolute; bottom: -15px; left:-10px;
+}
+
+.board .image .imageText {animation-name: slid-up; animation-duration: 1.2s;
+    line-height: 28px; 
+    text-align: left; bottom:50px;
+  position: absolute;
+  
+  color: #eeeeeeea;
+  font-size: 22px;
+  font-weight: 140;
+  letter-spacing: 3px;
+}
+
+/*게시글*/
+.board table{
+  width:100%; position: relative; top:18px;
+}
+.board table thead tr{ border-top: rgb(90, 90, 90) 3px solid; box-sizing: border-box;
+  background:#7c7c7c; color: #eeeeeeea; height: 44px;  width:100%; font-size: 18px;
+}
+.board table thead tr th{
+  vertical-align: middle; 
+}
+thead tr .head-1{width:6%;}
+thead tr .head-2{width:30%;}
+thead tr .head-3{width:12%;}
+thead tr .head-4{width:10%;}
+thead tr .head-5{width:6%;}
+thead tr .head-6{width:6%;}
+thead tr .head-7{width:6%;}
+.board .text {
+  position: absolute;
+  width: 71%;
+  /*height: 687px;*/
+  left: 0;
+  right: 0;
+  margin: 0px auto 0px auto;
+}
+.Boardrow td{
+  font-size: 17px;
+  border-bottom: 1px rgb(170, 170, 170) solid; height: 38px; vertical-align: middle; color: rgb(83, 83, 83);
+}
+.Boardrow td:hover, .Boardrow td:focus{
+  color:black;
+}
+.board .text .search .write {
+  float: left; cursor: pointer;
+  width: 80px; background: #7c7c7c; color:#eeeeeeea;
+  height: 34px;
+  border-style: solid; font-size: 15px; transition: 0.3s all;
+  border-width: 1.3px; position: relative; top:5px; border-radius: 6px;
+  border-color: rgba(134, 134, 134, 0.479);
+}
+.board .text .search .write:hover, .board .text .search .write:focus{
+  background: #666666; transform: translateY(-2px); font-weight: bold; box-shadow: 3px 6px 9px rgba(50,50,93,0.25); 
+}
+.board .text .search ul {
+  float: right;
+  
+}
+.board .text .search li {
+  /*ul로 하면 옆으로 정렬 x*/
+  display: inline-block; vertical-align: middle;
+  margin-left: 6px;
+}
+.board .text .search li img {
+  width: 36px; margin-top: 3px; 
+  height: 36px;
+}
+.board .text .search li input {
+  height: 30px; 
+  border-style: solid; margin-right: 5px;margin-left: -5px;
+  border-width: 2px;
+  border-color: rgba(134, 134, 134, 0.479);
+}
+
+.board .text .box .index {
+  width: 100%;
+  height: 40px;
+  background-color: #dcdcdc;
+  margin-bottom: 35px;
+  padding-top: 10px;
+  padding-left: 22px;
+  padding-bottom: 3px;
+}
+
+.board .text .box span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(134, 134, 134, 0.479);
+  margin-bottom: 35px;
+}
+.board .text .pagenum {
+  color: #5b5b5b;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.board .text .box .index li {
+  /*일렬로*/
+  display: inline-block; 
+  color: #5b5b5b;
+  font-size: 14px;
+  font-weight: 470;
+}
+.board .text .box .index ul .test {
+  /*:앞에 띄어쓰기 주의*/
+  margin-right: 365px;
+}
+.board .text .box .index ul :nth-child(2) {
+  margin-right: 365px;
+}
+.board .text .box .index ul :nth-child(3) {
+  margin-right: 70px;
+}
+.board .text .box .index ul :nth-child(4) {
+  margin-right: 33px;
+}
+.board .text .box .index ul img {
+  width: 17px;
+  height: 16px;
+}

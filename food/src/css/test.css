@@ -1,0 +1,143 @@
+@charset "utf-8";
+/*
+@import "reset.css";
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff")
+    format("woff");
+}
+*/
+
+.test {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding-bottom: 15px;
+}
+.test .inner {
+  position: absolute;
+  width: 80%;
+  left: 0px;
+  right: 0px;
+  margin: 150px auto;
+}
+.test .inner .question {
+  font-family: "GmarketSansBold", sans-serif !important;
+  color: #003ffa;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.test .inner .main {
+  font-family: "NanumBarunGothic", sans-serif !important;
+  color: #5b5b5b;
+  font-size: 46px;
+  font-weight: 300;
+}
+
+.test .contents {
+  position: absolute;
+  width: 45%;
+  height: 430px;
+  left: 0px;
+  right: 0px;
+  margin: 350px auto;
+  display: flex;
+  align-items: center;
+}
+.test .contents ul {
+  /*ul 100%해주어야 -> 버튼 100%사이즈 적용가능*/
+  width: 100%;
+}
+.test .contents button {
+  width: 100%;
+  height: 150px;
+  background-color: #003ffa;
+  font-size: 27px;
+  color: #e8e7e7;
+  border: none;
+  border-radius: 100px;
+  box-shadow: 0 4px 16px rgba(0, 79, 255, 0.3);
+  transition: 0.3s;
+}
+.test .contents ul :nth-child(1) {
+  margin-bottom: 25px;
+}
+
+/*뒤로가기*/
+.test .arr button {
+  color: rgba(0, 79, 255, 0.9);
+  background: transparent;
+  border: none;
+  font-size: 100px;
+  cursor: pointer;
+  position: relative;
+  left: 16%;
+  top: 568px;
+  transition: 0.3s all;
+}
+.test .arr button:hover,
+.test .arr button:focus {
+  outline: none;
+  top: 565px;
+  color: rgba(0, 79, 255, 0.6);
+}
+.test .arr {
+  text-align: left;
+}
+
+/*미디어쿼리*/
+@media (max-width: 767px) {
+  /*뒤로가기*/
+  .test .arr button {
+    font-size: 38px;
+    left: 13%;
+    top: 620px;
+  }
+  .test .arr button:focus {
+    top: 617px;
+  }
+  .test .contents {
+    width: 80%;
+  }
+  .test .inner .question {
+    font-size: 38px;
+    margin-bottom: 30px;
+  }
+  .test .inner .main {
+    font-size: 24px;
+  }
+  .test .contents button {
+    padding-left: 28px;
+    padding-right: 28px;
+    font-size: 14px;
+    height: 80px;
+    font-weight: bold;
+  }
+  .test .contents {
+    height: 250px;
+    margin: 390px auto;
+  }
+  .test .contents ul :nth-child(1) {
+    margin-bottom: 17px;
+  }
+}
+
+.test .contents button:focus {
+  outline: 0;
+}
+.test .contents button:hover {
+  background: rgba(0, 79, 255, 0.9);
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 79, 255, 0.6);
+}
