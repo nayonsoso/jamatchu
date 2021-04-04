@@ -103,7 +103,7 @@
     display: inline-block;
     width: 500px;
     height: 300px;
-    background-color: blanchedalmond;
+    background-color: rgb(240, 240, 240);
 }
 
 @media (max-width: 767px) {
