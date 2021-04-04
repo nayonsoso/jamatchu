@@ -44,7 +44,7 @@ class MapContent extends React.Component {
                     else if(mbti=="isfj"){keyword = '인하대 백반'}
                     else if(mbti=="isfp"){keyword = '인하대 라멘'}
                     else if(mbti=="istj"){keyword = '인하대 국밥'}
-                    else if(mbti=="istp"){keyword = '인하대 파스타'}
+                    else if(mbti=="istp"){keyword = '인하대 햄버거'}
                     this.setState({keyword:keyword})
                     ps.keywordSearch(keyword, placesSearchCB);
                     // 키워드 검색 완료 시 호출되는 콜백함수 입니다
