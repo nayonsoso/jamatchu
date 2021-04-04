@@ -86,12 +86,12 @@ app.post("/", function(req, res) {
 })
 
 // 리액트 정적 파일 제공
-app.use(express.static(path.join(__dirname, 'food/build')));
+app.use(express.static(path.join(__dirname, '../food/build')));
 // 라우트 설정
 app.get('*', (req, res) => {
-  res.sendFile(path.join('../'+__dirname+'/food/build/index.html'));
+  res.sendFile(path.join('../food/build/index.html'));
 });
-console.log(__dirname)
+console.log("dir은 ",__dirname)
 
 /*
 var distDir = __dirname + "/dist/";
