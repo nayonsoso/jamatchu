@@ -89,7 +89,7 @@ app.post("/", function(req, res) {
 app.use(express.static(path.join(__dirname, 'food/build')));
 // 라우트 설정
 app.get('*', (req, res) => {
-  res.sendFile(path.join('./'+__dirname+'/food/build/index.html'));
+  res.sendFile(path.join('../'+__dirname+'/food/build/index.html'));
 });
 
 /*
