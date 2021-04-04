@@ -3,18 +3,18 @@ import Axios from "axios"
 import "../css/test.css"
 
 const problem = [
-  "여러 사람과 술을 마시러 갔다면?",
-  "내일 파스타를 만들어 먹기로 했다면?",
-  "같이 밥먹는 친구의 쩝쩝소리가 거슬린다면?",
-  "다이어트를 결심한 당일 치킨이 먹고싶다면?",
+  "여러 사람과 <br>술을 마시러 갔다면?",
+  "내일 파스타를 <br>만들어 먹기로 했다면?",
+  "같이 밥먹는 친구의 <br>쩝쩝소리가 거슬린다면?",
+  "다이어트를 결심한 당일 <br>치킨이 먹고싶다면?",
   "둘 중 선호하는 식사자리는?",
   "아이스크림 매장에 갔다면?",
-  "어색한 사이인 친구가 음식을 해줬는데 밍밍하다면?",
-  "힘든 일을 끝내고 술을 마시러 갔다면?",
-  "곱창집에서 서비스로 나온 라면이 맛있다면?",
-  "인터넷으로 찾아 간 맛집의 웨이팅이 2시간이라면?",
-  "친구가 우울해서 단 게 땡긴다고 한다면?",
-  "친구와 맛집을 가기로 약속했다면?"
+  "어색한 사이인 친구가 <br>음식을 해줬는데 <br>밍밍하다면?",
+  "힘든 일을 끝내고 <br>술을 마시러 갔다면?",
+  "곱창집에서 서비스로 나온 <br>라면이 맛있다면?",
+  "인터넷으로 찾아 간 맛집의 <br>웨이팅이 2시간이라면?",
+  "친구가 우울해서 <br>단 게 땡긴다고 한다면?",
+  "친구와 맛집을 가기로 <br>약속했다면?"
 ]
 const answer = [
   [
@@ -22,8 +22,8 @@ const answer = [
     { text: "다른 사람이 시킨 안주를 먹는다.", version: 0 , value:"i" }
   ],
   [
-    { text: "파스타가 얼마나 맛있게 될 지 상상한다.", version: 1 , value:"n" },
-    { text: "파스타 재료를 어떤 걸 사야 할 지 생각한다.", version: 1 , value:"s"}
+    { text: "파스타가 얼마나 맛있게 될 지 <br>상상한다.", version: 1 , value:"n" },
+    { text: "파스타 재료를 어떤 걸 사야 할 지 <br>생각한다.", version: 1 , value:"s"}
   ],
   [
     { text: "친구에게 말한다.", version: 2 , value:"t" },
@@ -34,8 +34,8 @@ const answer = [
     { text: "닭가슴살을 먹는다.", version: 3 , value:"j" }
   ],
   [
-    { text: "활기차고 즐거운 분위기의 다수와 식사", version: 0 , value:"e"},
-    { text: "조곤조곤 수다떨 수 있는 소수와 식사", version: 0 , value:"i" }
+    { text: "활기차고 즐거운 분위기의 <br>다수와 식사", version: 0 , value:"e"},
+    { text: "조곤조곤 수다떨 수 있는 <br>소수와 식사", version: 0 , value:"i" }
   ],
   [
     { text: "새로 나온 맛을 고른다.", version: 1 , value:"n" },
@@ -43,10 +43,10 @@ const answer = [
   ],
   [
     { text: "소금을 더 넣어야 할 것 같다고 말한다.", version: 2 , value:"t" },
-    { text: "맛있다고 하고 음식에 대한 언급을 하지 않는다.", version: 2 , value:"f" }
+    { text: "맛있다고 하고 <br>음식에 대한 언급을 하지 않는다.", version: 2 , value:"f" }
   ],
   [
-    { text: "내일의 나는 생각하지 않고 죽어라 마신다.", version: 3 , value:"p" },
+    { text: "내일의 나는 생각하지 않고 <br>죽어라 마신다.", version: 3 , value:"p" },
     { text: "적당히 조절해가며 마신다.", version: 3 , value:"j" }
   ],
   [
@@ -62,8 +62,8 @@ const answer = [
     { text: "왜 우울한지 물어본다.", version: 2 , value:"f" }
   ],
   [
-    { text: "미리 어느 식당으로 갈지 선정 후 위치를 찾아보고 간다.", version: 3 , value:"p" },
-    { text: "당일 걸어다니며 끌리는 음식점으로 즉흥적으로 들어간다.", version: 3 , value:"j" }
+    { text: "미리 어느 식당으로 갈지 선정 후 <br>위치를 찾아보고 간다.", version: 3 , value:"p" },
+    { text: "당일 걸어다니며 끌리는 음식점으로 <br>즉흥적으로 들어간다.", version: 3 , value:"j" }
   ]
 ]
 
@@ -121,18 +121,16 @@ class Test extends React.Component {
       <div className="test">
         <div className="inner">
           <h2 className="question">Q{idx + 1}.</h2>
-          <h1 className="main">{problem[idx]}</h1>
+          <h1 className="main" dangerouslySetInnerHTML={{__html: problem[idx]}}></h1>
         </div>
         <div className="contents">
           <ul>
             <li>
-              <button type="button" onClick={(e) => this.nextf(e, answer[idx][0].version, answer[idx][0].value)}>
-                {answer[idx][0].text}
+              <button type="button" dangerouslySetInnerHTML={{__html: answer[idx][0].text}} onClick={(e) => this.nextf(e, answer[idx][0].version, answer[idx][0].value)}>
               </button>
             </li>
             <li>
-              <button type="button" onClick={(e) => this.nextf(e, answer[idx][1].version, answer[idx][1].value)}>
-                {answer[idx][1].text}
+              <button type="button" dangerouslySetInnerHTML={{__html: answer[idx][1].text}} onClick={(e) => this.nextf(e, answer[idx][1].version, answer[idx][1].value)}>
               </button>
             </li>
           </ul>

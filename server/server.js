@@ -93,17 +93,12 @@ app.get('*', (req, res) => {
 });
 console.log("dir은 ",__dirname)
 
-/*
-var distDir = __dirname + "/dist/";
-app.use(express.static(distDir));
-*/
-
 // 로그아웃
 app.post("/logout", function(req, res) {
   delete req.session.user_id
   delete req.session.user_name
   req.session.save(function() {
     res.send()
-  }) // redirect 가 있는경우, 저장하기 전에 redirect가 되는걸 방지
+  })
 })
 app.listen(PORT, console.log(PORT,"번 포트가 실행되었습니다."));
