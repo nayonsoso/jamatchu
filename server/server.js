@@ -91,6 +91,7 @@ app.use(express.static(path.join(__dirname, 'food/build')));
 app.get('*', (req, res) => {
   res.sendFile(path.join('../'+__dirname+'/food/build/index.html'));
 });
+console.log(__dirname)
 
 /*
 var distDir = __dirname + "/dist/";
