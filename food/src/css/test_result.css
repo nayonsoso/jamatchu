@@ -33,6 +33,7 @@
     padding-bottom: 30px;
 }
 
+
 .result .title {
     position: absolute;
     width: 93%;
@@ -74,10 +75,11 @@
 }
 .result .Menu h2 {
     color: #5b5b5b;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: 15px;
     font-size: 52px;
     font-weight: 400;
+    line-height: 1.2em;
 }
 
 .result .Desc {
@@ -87,22 +89,43 @@
     left: 0px;
     right: 0px;
     margin: 480px auto;
-    margin-bottom: 50px;
     text-align: center;
     color: #5b5b5b;
     font-size: 18px;
     font-weight: 250;
     letter-spacing: 2px;
+    line-height: 1.3em;
 }
 
 .result .Map{
     display: block;
     margin:0 auto;
-    width: 90%; height: 300px;
+    width: 90%;
     overflow: hidden;
     text-align: center;
+    letter-spacing: 1px;
+    z-index: -20;
 }
 
+.result .List{
+    margin-top: 15px;
+    width: 100%;
+    position: absolute;
+    font-family: "NanumBarunGothic", sans-serif !important;
+    color: #5b5b5b;
+    font-weight: 250;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.4em;
+}
+#li_title{
+    display: block;
+    font-weight: 300;
+    margin-bottom: 4px;
+}
+.mapBox{
+    margin-top: 15px;
+}
 .result .Desc p {
     padding-left: 8%;
     padding-right: 8%;
@@ -114,12 +137,14 @@
     background-color: #b8b5b5;
 }
 .result .toMain {
+    margin-bottom: 50px;
     font-family: "NanumBarunGothic", sans-serif !important;
     position: absolute;
     width: 93%;
+    height : 200px;
     left: 0px;
     right: 0px;
-    margin: 780px auto;
+    top: 850px;
     text-align: right;
 }
 .result .toMain h5 {
@@ -148,7 +173,7 @@
         font-weight: 400;
     }
     .result .Menu {
-        margin: 170px auto;
+        margin: 145px auto;
     }
     .result .Menu img {
         width: 25px;
@@ -168,7 +193,9 @@
         height: 1px;
     }
     .result .toMain {
-        margin: 980px auto;
+        top: 840px;
+        margin: 0px auto;
+        height: 100px;
     }
     .result .toMain h5 {
         font-size: 12px;

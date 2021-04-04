@@ -21,12 +21,13 @@ router.post("/", function(req, res) {
         var user_id = req.session.user_id;
         conn.query(sql, [user_id], function (err, rs) {
             var user_mbti = rs[0].user_mbti;
-            var sql = 'SELECT * FROM result WHERE mbti = ?';
-            conn.query(sql, [user_mbti], function (err, rs) {
+            var _sql = 'SELECT * FROM result WHERE mbti = ?';
+            conn.query(_sql, [user_mbti], function (err, rs) {
                 var _menu = rs[0].menu;
                 var _desc = rs[0].desc;
                 var _map = rs[0].map;
-                res.send({menu: _menu, desc: _desc, map: _map, id: user_id});
+                let _li = rs[0].li;
+                res.send({menu: _menu, desc: _desc, map: _map, id: user_id, li:_li});
             })
         })
     }
@@ -37,7 +38,8 @@ router.post("/", function(req, res) {
             var _menu = rs[0].menu;
             var _desc = rs[0].desc;
             var _map = rs[0].map;
-            res.send({menu: _menu, desc: _desc, map: _map, id: user_id});
+            let _li = rs[0].li;
+            res.send({menu: _menu, desc: _desc, map: _map, id: user_id, li:_li});
         })
     }
 })
