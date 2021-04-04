@@ -97,12 +97,10 @@
 
 .result .Map{
     display: block;
-    border: solid red 2px;
-    margin: auto;
-    margin-top: 700px;
-    position: absolute;
-    width: 80%; height: 300px;
+    margin:0 auto;
+    width: 90%; height: 300px;
     overflow: hidden;
+    text-align: center;
 }
 
 .result .Desc p {
@@ -170,7 +168,7 @@
         height: 1px;
     }
     .result .toMain {
-        margin: 730px auto;
+        margin: 980px auto;
     }
     .result .toMain h5 {
         font-size: 12px;

@@ -85,8 +85,9 @@ class MapContent extends React.Component {
         var keyword = this.state.keyword;
         return (
             <div className="mapBox">
-                <div>카카오 지도에서 "{keyword}" 검색 결과입니다. </div>
-                <div id="Mymap" style={{ width: "100%", height: "500px"}}></div>
+                <div style = {{marginBottom:"3px"}} >카카오 지도에서 </div>
+                <div>"{keyword}" 검색 결과입니다. </div>
+                <div id="Mymap" style={{ width: "100%", height: "300px"}}></div>
             </div>
         )
     }

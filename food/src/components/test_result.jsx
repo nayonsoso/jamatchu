@@ -44,9 +44,11 @@ class Test_result extends React.Component {
                         <span></span>
                         <p dangerouslySetInnerHTML={{__html:desc}}></p>
                         <span></span>
-                    </div>
-                    <div className="Map">
-                        <MapContent/>
+                        <div className="Map">
+                            <span></span>
+                            <MapContent/>
+                            <span></span>
+                        </div>
                     </div>
                     <div className="toMain">
                         <Link to="/">
